@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis Confusion Matrix (10x10)</title>
+    <link rel="stylesheet" href="medical_style.css">
+</head>
+<body>
+    <div class="author-header">
+        <h2>CHRISTIAN VALERIO AND CHRISTINE QUINTANA</h2>
+    </div>
+    
+    <div class="container">
+        <h1>Medical Diagnosis Confusion Matrix<br><small>10 Classes (Actual vs Predicted)</small></h1>
+        
+        <div class="controls">
+            <button onclick="generateMatrix()">Regenerate</button>
+            <button onclick="randomData()">Random Data</button>
+        </div>
+        
+        <div class="matrix-container">
+            <div class="row-labels">
+                <div class="label empty"></div>
+                <div class="label">Normal</div>
+                <div class="label">Fract.Minor</div>
+                <div class="label">Fract.Major</div>
+                <div class="label">TumorBenign</div>
+                <div class="label">TumorMalig</div>
+                <div class="label">Inf.Mild</div>
+                <div class="label">Inf.Severe</div>
+                <div class="label">StrokeMild</div>
+                <div class="label">StrokeSevere</div>
+                <div class="label">HeartAbnorm</div>
+            </div>
+            <div class="grid" id="matrixGrid">
+                <div class="grid-row">
+                    <div class="col-label">Pred ↓</div>
+                    <div class="col-label">Normal</div>
+                    <div class="col-label">Fract.Minor</div>
+                    <div class="col-label">Fract.Major</div>
+                    <div class="col-label">TumorBenign</div>
+                    <div class="col-label">TumorMalig</div>
+                    <div class="col-label">Inf.Mild</div>
+                    <div class="col-label">Inf.Severe</div>
+                    <div class="col-label">StrokeMild</div>
+                    <div class="col-label">StrokeSevere</div>
+                    <div class="col-label">HeartAbnorm</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="metrics-panel" id="totalsInfo">
+            <h3>Model Performance</h3>
+        </div>
+    </div>
+    <script src="medical_script.js"></script>
+</body>
+</html>
